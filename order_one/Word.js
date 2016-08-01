@@ -2,6 +2,8 @@ var _ = require('underscore');
 
 var Word = function(name) {
 	this.name = name;
+	//because I'm lazy this library is technically full of Word objects.
+	//really all we need from it are some counters.
 	this.library = {};
 	this.timesSeen = 0;
 	this.builtIndices = [];
@@ -35,6 +37,7 @@ Word.prototype.buildIndices = function() {
 	}
 };
 
+//add the chained word to the library of possibilities
 Word.prototype.chain = function(word) {
 	if(!this.library[word]) {
 		this.library[word] = new Word(word);

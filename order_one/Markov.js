@@ -1,9 +1,7 @@
 var _ = require('underscore');
 var Word = require('./Word');
 
-var Markov = function(name) {
-	this.name = name;
-}
+var Markov = function() {}
 
 //Markov is really a subclass of a Word with some new features.
 Markov.prototype = new Word();
